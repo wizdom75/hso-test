@@ -1,79 +1,79 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## About
 
-## About Laravel
+This a test API which has accounts, orders and products functionality.
+It also makes use of the laravel passport module to authenticate users.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The functionality is very basic but demonstrates how results can be paginted when being passed on to a front-end app like vue or react.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+The has full CRUD functionality
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+The Account and Order models have a one to many relationship respectively
+The Product and Order models have this too.
 
-## Learning Laravel
+The relationships does not have any foreign key constraints on the database level but can be added if need be by creating an update migration.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## How to run the app
+Step 1
+Clone the the repo or copy to your hosting folder
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Step 2
+Navigate to the app folder
 
-## Laravel Sponsors
+Step 3
+Run 'Composer dump-autoload
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Step 4
+Create a database in your database
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
-- [云软科技](http://www.yunruan.ltd/)
+Step 5
+Add database details to the .env file
+Add PAGE_SIZE constant to .env file and set value according to how many items you want displayed per page
 
-## Contributing
+Step 6
+Run command 'php artisan migrate'
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Step 6
+Run command 'php artisan db:seed'
 
-## Code of Conduct
+Step 7
+Run command 'php artisan serve'
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Available routes 
+User routes (POST)
+http://127.0.0.1:8000/api/register
+http://127.0.0.1:8000/api/login
 
-## Security Vulnerabilities
+Account routes (GET)
+http://127.0.0.1:8000/api/accounts
+http://127.0.0.1:8000/api/accounts/1
+Account routes (POST)
+http://127.0.0.1:8000/api/accounts
+Account routes (PUT) & (DELETE)
+http://127.0.0.1:8000/api/accounts/1
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Orders routes (GET)
+http://127.0.0.1:8000/api/orders
+http://127.0.0.1:8000/api/account_orders/1
+http://127.0.0.1:8000/api/orders/1
+Orders routes (POST)
+http://127.0.0.1:8000/api/orders
+Orders routes (PUT) & (DELETE)
+http://127.0.0.1:8000/api/orders/1
 
-## License
+Products routes (GET)
+http://127.0.0.1:8000/api/products
+http://127.0.0.1:8000/api/products/1
+Account routes (POST)
+http://127.0.0.1:8000/api/products
+Account routes (PUT) & (DELETE)
+http://127.0.0.1:8000/api/products/1
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Authentication
+The API routes are are all behind a middleware that requires users to be signed in.
+The seed creates a user whose login details are
+email = admin@test.com & password = password
+use these details to login here http://127.0.0.1:8000/api/login by passing the 2 params using a client such as insomnia or postman
+Once authenticated a bearer token will be returned and this should be passed in the header when making requested to the API
+
+If the login details provided do not work you can use the http://127.0.0.1:8000/api/register route to create another account.
