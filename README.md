@@ -41,35 +41,35 @@ Run command 'php artisan db:seed'
 Step 7
 Run command 'php artisan serve'
 
-## Available routes 
-User routes (POST) 
-http://127.0.0.1:8000/api/register 
-http://127.0.0.1:8000/api/login 
+## Available routes     
+User routes (POST)  
+http://127.0.0.1:8000/api/register  
+http://127.0.0.1:8000/api/login     
 
-Account routes (GET)  
+Account routes (GET)    
+http://127.0.0.1:8000/api/accounts          
+http://127.0.0.1:8000/api/accounts/1    
+Account routes (POST)   
 http://127.0.0.1:8000/api/accounts  
-http://127.0.0.1:8000/api/accounts/1 
-Account routes (POST) 
-http://127.0.0.1:8000/api/accounts 
-Account routes (PUT) & (DELETE) 
-http://127.0.0.1:8000/api/accounts/1 
+Account routes (PUT) & (DELETE)     
+http://127.0.0.1:8000/api/accounts/1    
 
-Orders routes (GET) 
-http://127.0.0.1:8000/api/orders 
-http://127.0.0.1:8000/api/account_orders/1 
-http://127.0.0.1:8000/api/orders/1 
-Orders routes (POST) 
-http://127.0.0.1:8000/api/orders 
-Orders routes (PUT) & (DELETE) 
-http://127.0.0.1:8000/api/orders/1 
+Orders routes (GET)     
+http://127.0.0.1:8000/api/orders        
+http://127.0.0.1:8000/api/account_orders/1  
+http://127.0.0.1:8000/api/orders/1  
+Orders routes (POST)    
+http://127.0.0.1:8000/api/orders    
+Orders routes (PUT) & (DELETE)  
+http://127.0.0.1:8000/api/orders/1  
 
-Products routes (GET) 
-http://127.0.0.1:8000/api/products 
-http://127.0.0.1:8000/api/products/1 
-Account routes (POST) 
+Products routes (GET)   
 http://127.0.0.1:8000/api/products  
-Account routes (PUT) & (DELETE) 
-http://127.0.0.1:8000/api/products/1 
+http://127.0.0.1:8000/api/products/1    
+Account routes (POST)   
+http://127.0.0.1:8000/api/products      
+Account routes (PUT) & (DELETE)     
+http://127.0.0.1:8000/api/products/1    
 
 ## Authentication
 The API routes are are all behind a middleware that requires users to be signed in.
